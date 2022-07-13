@@ -17,7 +17,9 @@ class InfinInt
         // operator overloads
         void operator=(const InfinInt &other);
         void operator++();
+        void operator++(int);
         void operator--();
+        void operator--(int);
 
         inline void display() const noexcept { std::cout << _value << "\n"; };
     private:

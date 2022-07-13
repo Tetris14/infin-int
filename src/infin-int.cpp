@@ -21,7 +21,17 @@ void InfinInt::operator=(const InfinInt &other)
     _value = other._value;
 }
 
+void InfinInt::operator++(int)
+{
+    _value = std::to_string(std::stoi(_value) + 1);
+}
+
 void InfinInt::operator++()
 {
     _value = std::to_string(std::stoi(_value) + 1);
+}
+
+void InfinInt::operator--(int)
+{
+    _value = std::to_string(std::stoi(_value) - 1);
 }
