@@ -36,6 +36,11 @@ void InfinInt::operator--(int)
     _value = std::to_string(std::stoi(_value) - 1);
 }
 
+void InfinInt::operator+=(const InfinInt &other)
+{
+    _value = std::to_string(std::stoi(_value) + std::stoi(other._value));
+}
+
 std::ostream &operator<<(std::ostream &os, const InfinInt &other)
 {
     os << other._value;
