@@ -35,3 +35,9 @@ void InfinInt::operator--(int)
 {
     _value = std::to_string(std::stoi(_value) - 1);
 }
+
+std::ostream &operator<<(std::ostream &os, const InfinInt &other)
+{
+    os << other._value;
+    return os;
+}

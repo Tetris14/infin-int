@@ -14,12 +14,15 @@ class InfinInt
     public:
         InfinInt(int value = 0);
         ~InfinInt();
+
         // operator overloads
         void operator=(const InfinInt &other);
         void operator++();
         void operator++(int);
         void operator--();
         void operator--(int);
+        void operator+=(const InfinInt &other);
+        friend std::ostream &operator<<(std::ostream &os, const InfinInt &other);
 
         inline void display() const noexcept { std::cout << _value << "\n"; };
     private:
