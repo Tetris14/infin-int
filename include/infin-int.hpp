@@ -28,3 +28,5 @@ class InfinInt
     private:
         std::string _value;
 };
+
+int add(int *result, int a, int b);

@@ -7,6 +7,20 @@
 
 #include "infin-int.hpp"
 
+/*
+returns -1 if and error occurs or an overflow
+returns 0 if the operation is successful and put the result in the parameter "result"
+*/
+int add(int *result, int a, int b)
+{
+    *result = a + b;
+    if(a > 0 && b > 0 && *result < 0)
+        return -1;
+    if(a < 0 && b < 0 && *result > 0)
+        return -1;
+    return 0;
+}
+
 InfinInt::InfinInt(int value)
 {
     _value = std::to_string(value);
